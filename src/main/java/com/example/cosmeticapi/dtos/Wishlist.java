@@ -1,4 +1,4 @@
-package com.cosmetic.demo.dtos;
+package com.example.cosmeticapi.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.cosmetic.demo.model;
+package com.example.cosmeticapi.model;
 
 import jakarta.persistence.*;
 

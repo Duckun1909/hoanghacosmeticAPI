@@ -1,4 +1,4 @@
-package com.cosmetic.demo.model;
+package com.example.cosmeticapi.model;
 
 import jakarta.persistence.*;
 
@@ -18,14 +18,25 @@ public class Address {
     @Column(name = "adr_phone", nullable = false, length = 15)
     private String adrPhone;
     @Basic
-    @Column(name = "adr_shipping", nullable = true, length = 200)
+    @Column(name = "adr_shipping", nullable = false, length = 200)
     private String adrShipping;
     @Basic
-    @Column(name = "user_id", nullable = true)
+    @Column(name = "user_id", nullable = false)
     private Integer userId;
+    @Basic
+    @Column(name = "active", nullable = true )
+    private int active;
     @ManyToOne
     @PrimaryKeyJoinColumn(name = "user_id", referencedColumnName = "id")
     private User userByUserId;
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
 
     public int getId() {
         return id;

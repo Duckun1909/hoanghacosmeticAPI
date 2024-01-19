@@ -1,9 +1,7 @@
-package com.cosmetic.demo.model;
+package com.example.cosmeticapi.model;
 
 import jakarta.persistence.*;
-import org.springframework.cglib.core.Local;
 
-import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Objects;
