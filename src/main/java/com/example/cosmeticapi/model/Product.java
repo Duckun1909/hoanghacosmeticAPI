@@ -1,6 +1,7 @@
 package com.example.cosmeticapi.model;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 
 import java.util.Collection;
 import java.util.Objects;
@@ -13,11 +14,11 @@ public class Product {
     @Column(name = "id", nullable = false)
     private int id;
     @Basic
-    @Column(name = "cat_id", nullable = false)
-    private int catId;
+    @Column(name = "cat_id", nullable = true)
+    private Integer catId;
     @Basic
-    @Column(name = "brand_id", nullable = false)
-    private int brandId;
+    @Column(name = "brand_id", nullable = true)
+    private Integer brandId;
     @Basic
     @Column(name = "prd_name", nullable = false, length = 100)
     private String prdName;
@@ -38,7 +39,7 @@ public class Product {
     private double prdDiscount;
     @Basic
     @Column(name = "prd_status", nullable = false)
-    private byte prdStatus;
+    private Integer prdStatus;
     @OneToMany(mappedBy = "productByPrdId")
     private Collection<Orderdetails> orderdetailsById;
     @ManyToOne
@@ -60,19 +61,19 @@ public class Product {
         this.id = id;
     }
 
-    public int getCatId() {
+    public Integer getCatId() {
         return catId;
     }
 
-    public void setCatId(int catId) {
+    public void setCatId(Integer catId) {
         this.catId = catId;
     }
 
-    public int getBrandId() {
+    public Integer getBrandId() {
         return brandId;
     }
 
-    public void setBrandId(int brandId) {
+    public void setBrandId(Integer brandId) {
         this.brandId = brandId;
     }
 
@@ -124,11 +125,11 @@ public class Product {
         this.prdDiscount = prdDiscount;
     }
 
-    public byte getPrdStatus() {
+    public Integer getPrdStatus() {
         return prdStatus;
     }
 
-    public void setPrdStatus(byte prdStatus) {
+    public void setPrdStatus(Integer prdStatus) {
         this.prdStatus = prdStatus;
     }
 

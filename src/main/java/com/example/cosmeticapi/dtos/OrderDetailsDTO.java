@@ -12,8 +12,8 @@ import org.springframework.validation.annotation.Validated;
 @NoArgsConstructor
 @Validated
 public class OrderDetailsDTO {
-    private Long order_id;
-    private Long prd_id;
+    private int order_id;
+    private int prd_id;
     private int quantity;
     private double unit_price;
 }

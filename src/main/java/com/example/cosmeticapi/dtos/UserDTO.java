@@ -3,14 +3,10 @@ package com.example.cosmeticapi.dtos;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.validation.annotation.Validated;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDTO {
@@ -35,4 +31,6 @@ public class UserDTO {
     @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,12}$", message = "Password is invalid!")
 //    Tối thiểu 8 và tối đa 12 ký tự, ít nhất một chữ hoa, một chữ thường, một số và một ký tự đặc biệt
     private String password;
+
+    private int roleId;
 }

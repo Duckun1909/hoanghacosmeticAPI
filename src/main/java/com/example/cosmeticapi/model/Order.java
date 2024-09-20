@@ -24,7 +24,7 @@ public class Order {
     private LocalDateTime orderDate;
     @Basic
     @Column(name = "order_status", nullable = false)
-    private byte orderStatus;
+    private int orderStatus;
     @Basic
     @Column(name = "order_note", nullable = true, length = 200)
     private String orderNote;
@@ -69,11 +69,11 @@ public class Order {
         this.orderDate = orderDate;
     }
 
-    public byte getOrderStatus() {
+    public int getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(byte orderStatus) {
+    public void setOrderStatus(int orderStatus) {
         this.orderStatus = orderStatus;
     }
 

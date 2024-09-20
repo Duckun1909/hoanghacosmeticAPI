@@ -16,7 +16,7 @@ public class Brand {
     @Column(name = "brd_name", nullable = false, length = 100)
     private String brdName;
     @Basic
-    @Column(name = "brd_img", nullable = false, length = 255)
+    @Column(name = "brd_img", nullable = true, length = 255)
     private String brdImg;
     @Basic
     @Column(name = "brd_website", nullable = true, length = 255)

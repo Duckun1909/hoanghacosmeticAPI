@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Validated
 public class OrderDTO {
-    private Long user_id;
+    private int user_id;
     private String order_code;
     private LocalDateTime order_date;
     private int order_status;

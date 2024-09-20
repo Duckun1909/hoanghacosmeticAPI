@@ -19,7 +19,7 @@ public class Productdetails {
     private String prdsImage;
     @Basic
     @Column(name = "prds_type", nullable = true)
-    private Byte prdsType;
+    private int prdsType;
     @Basic
     @Column(name = "prd_id", nullable = false)
     private int prdId;
@@ -51,11 +51,11 @@ public class Productdetails {
         this.prdsImage = prdsImage;
     }
 
-    public Byte getPrdsType() {
+    public int getPrdsType() {
         return prdsType;
     }
 
-    public void setPrdsType(Byte prdsType) {
+    public void setPrdsType(int prdsType) {
         this.prdsType = prdsType;
     }
 

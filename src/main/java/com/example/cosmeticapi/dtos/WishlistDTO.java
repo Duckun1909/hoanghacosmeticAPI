@@ -11,7 +11,7 @@ import org.springframework.validation.annotation.Validated;
 @AllArgsConstructor
 @NoArgsConstructor
 @Validated
-public class Wishlist {
-    private Long user_id;
-    private Long prd_id;
+public class WishlistDTO {
+    private int user_id;
+    private int prd_id;
 }

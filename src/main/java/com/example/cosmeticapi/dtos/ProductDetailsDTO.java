@@ -15,5 +15,5 @@ public class ProductDetailsDTO {
     private String prds_color;
     private String prds_image;
     private int prds_type;
-    private Long prd_id;
+    private int prd_id;
 }

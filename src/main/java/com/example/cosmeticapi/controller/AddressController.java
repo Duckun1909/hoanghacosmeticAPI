@@ -50,7 +50,7 @@ public class AddressController {
     }
 
     @PutMapping("/updateAddress")
-    public ResponseEntity<?> updateUser(
+    public ResponseEntity<?> updateAddress(
             @RequestBody @Valid AddressUpdateDTO addressUpdateDTO,
             @RequestParam("id") int id)
     {
